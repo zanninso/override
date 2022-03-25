@@ -1,0 +1,9 @@
+decompile the binary 
+    - the binary read from input a number
+    - compare this number with '0x149c' == 5276
+    - if equal do system("/bin/sh")
+    - else print("failed")
+exec bin
+    - write 5276 -> get sh prompt
+    - cat /home/users/level01/.pass -> flag
+    
