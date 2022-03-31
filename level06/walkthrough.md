@@ -1,4 +1,4 @@
-# LEVEL 04
+# LEVEL 06
 
 * after decompiling the binary:
 	- we notice that it takes two inputs, a string and a number.
