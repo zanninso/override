@@ -19,15 +19,16 @@ int verify_user_pass(char *password) {
 int main() {
     int error;
     char password[64];
+
     memset(password, 0, 16);
     error = 0;
     puts("********* ADMIN LOGIN PROMPT *********");
     print("Enter Username: ");
-    fgets(in_user_name, 0x100, stdin);
+    fgets(in_user_name, 256, stdin);
     error = verify_user_name();
     if (error == 0) {
         puts("Enter Password: ");
-        fgets(password, 0x64, stdin);
+        fgets(password, 100, stdin);
         error = verify_user_pass(password);
         puts("nope, incorrect password...\n");
     }

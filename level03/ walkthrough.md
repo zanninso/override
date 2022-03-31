@@ -37,8 +37,8 @@
     - compare result: result <= '0x15'
     - if true: call decrypt(result)
     - decrypt:
-        - decrypt "Q}|u`sfg~sf{}|a3" with the result save it in hash.
-        - compare hash == "Congratulations!"
+        - decrypt ``"Q}|u`sfg~sf{}|a3"`` with the result save it in hash.
+        - compare hash == `"Congratulations!"`
         - if true: system("/bin/sh")
         - else print("error")
 
@@ -46,10 +46,10 @@
 
 * prepare:
     to call decrypt with the result we need to send a value with  0 <= 0x1337d00d - x <= 21
-    so we have 21 number that make it easy to try to decrypt ``Q}|u`sfg~sf{}|a3`` with all the 21 number
+    so we have 21 number that make it easy to try to decrypt ``"Q}|u`sfg~sf{}|a3"`` with all the 21 number
     then we found that 18 give us the result that we want.
     > <b>0x1337d00d - 18 == 322424827</b>
-    
+
     ___
 
 * exec bin:

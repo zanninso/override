@@ -22,8 +22,8 @@ void decrypt(int password) {
 }
 
 void test(int in_pass, int pass) {
-    int res = (pass - in_pass);
-    if (res <= (unsigned)0x15)
+    unsigned int res = (pass - in_pass);
+    if (res <= 21)
     {
         goto *((res << 0x2) + 0x80489f0);// 0x80489f0 -> (&decrypt(rand()));
         {
