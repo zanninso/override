@@ -1,7 +1,7 @@
 #include "stdio.h"
 #include "string.h"
 
-void set_username(char *username)
+void set_username(char *data)
 {
     char input[140];
     int idx;
@@ -13,13 +13,13 @@ void set_username(char *username)
     idx = 0;
     while (idx <= 40 && input[idx] != 0)
     {
-        (username + 140)[idx] = input[idx];
+        (data + 140)[idx] = input[idx];
         idx++;
     }
-    printf(">: Welcome, %s", username + 140, username + 140);
+    printf(">: Welcome, %s", data + 140, data + 140);
 }
 
-void set_msg(char *username)
+void set_msg(char *data)
 {
     char input[1024];
 
@@ -27,15 +27,15 @@ void set_msg(char *username)
     puts(">: Msg @Unix-Dude");
     printf(">>: ");
     fgets(input, 1024, stdin);
-    strncpy(username, input, ((int*)username)[45]);
+    strncpy(data, input, ((int*)data)[45]);
 }
 
 void handle_msg()
 {
-    char username[180] = {0};
-    int var = 140;
-    set_username(username);
-    set_msg(username);
+    char data[180] = {0};
+    int len = 140;
+    set_username(data);
+    set_msg(data);
     puts(">: Msg sent!");
 }
 
