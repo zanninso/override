@@ -16,6 +16,7 @@
     - compare this number with '0x149c' == 5276
     - if equal do system("/bin/sh")
     - else print("failed")
+    ___
 
 * exec bin
     - write 5276 -> get sh prompt
